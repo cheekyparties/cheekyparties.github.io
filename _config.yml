@@ -1,18 +1,10 @@
-# _config.yml
-
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that.
-
-# -- Site Settings --
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
+# The title and description for your site, used by search engines and in the browser tab.
 title: Cheeky Spankos
-description: >- # this means to ignore newlines until "baseurl:"
-  Fun, consensual parties for adults in New York City.
-url: "https://cheekyparties.github.io" # The domain of your site
-baseurl: "" # Keep this empty for a user/organization page
+description: Fun, consensual parties for adults in New York City.
+
+# The full URL for your site. This is CRITICAL for paths to work correctly.
+url: "https://cheekyparties.github.io"
+
+# The baseurl should be an EMPTY string for a user/organization site like yours.
+# This is another CRITICAL setting.
+baseurl: ""
