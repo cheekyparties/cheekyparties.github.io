@@ -1,2 +1,2 @@
 # cheekyparties.github.io
-Website
+This is our website.
