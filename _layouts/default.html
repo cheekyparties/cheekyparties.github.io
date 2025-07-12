@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>{{ page.title }} | {{ site.title }}</title>
-    
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}">
+    <!-- ... your head content ... -->
 </head>
 <body>
 
+    <!-- ... your header, main, and footer ... -->
     <header class="header">
         {% include header.html %}
     </header>
@@ -22,5 +18,7 @@
         {% include footer.html %}
     </footer>
 
+    <!-- Add this line to load your JavaScript -->
+    <script src="{{ '/assets/js/scripts.js' | absolute_url }}"></script>
 </body>
 </html>
