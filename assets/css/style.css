@@ -85,3 +85,41 @@ body {
         margin: 10px 0;
     }
 }
+
+/* --- Homepage Two-Column Layout --- */
+
+.home-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows columns to stack on mobile */
+    padding: 20px;
+}
+
+.photo-column {
+    flex: 1; /* Takes up 1 part of the space */
+    min-width: 300px; /* Ensures it doesn't get too squished */
+    padding-right: 20px;
+}
+
+.text-column {
+    flex: 2; /* Takes up 2 parts of the space */
+    min-width: 300px;
+}
+
+.photo-carousel img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Soft rounded corners for the image */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- Responsive Adjustments for Mobile --- */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+    }
+
+    .photo-column {
+        padding-right: 0;
+        padding-bottom: 20px; /* Add space between stacked columns */
+    }
+}
