@@ -105,11 +105,21 @@ body {
     min-width: 300px;
 }
 
+/* This rule defines the container's shape and crops the content */
+.photo-carousel {
+    width: 100%;
+    aspect-ratio: 1 / 1;     /* Creates a square. Use 4 / 3 or 16 / 9 for other ratios. */
+    border-radius: 8px;      /* Applies rounded corners to the container */
+    overflow: hidden;        /* Hides the parts of the image that overflow the container */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* This rule controls how the image behaves inside the container */
 .photo-carousel img {
     width: 100%;
-    height: auto;
-    border-radius: 8px; /* Soft rounded corners for the image */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 100%;
+    object-fit: cover;       /* Scales the image to cover the area, cropping as needed */
+    object-position: center; /* Centers the image within the frame before cropping */
 }
 
 /* --- Responsive Adjustments for Mobile --- */
