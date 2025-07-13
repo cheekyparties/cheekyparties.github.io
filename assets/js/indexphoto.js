@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const images = [
         'bathbrush.avif',
         'pocket.avif',
-        'stumpbelt.jpeg',
         'cheeky_chair.jpeg',
         'holdingstrap.avif',
         'stumpbelt.jpeg'
