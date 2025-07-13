@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'bathbrush.avif',
         'pocket.avif',
         'stumpbelt.jpeg',
-        'cheeky_chair.jpeg'
-        'holdingstrap.avif'
+        'cheeky_chair.jpeg',
+        'holdingstrap.avif',
         'stumpbelt.jpeg'
         // Add more image filenames here, e.g., 'photo5.jpg',
     ];
