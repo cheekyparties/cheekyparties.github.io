@@ -49,6 +49,12 @@ body {
     color: #228B22; /* Leafy Green */
 }
 
+a {
+    color: #228B22; /* Leafy Green */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
 /* Main Content Styles */
 .main-content {
     flex: 1;
