@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add the filenames of your photos to this list.
     // These images must be in your /assets/images/ folder.
     const images = [
-        'photo1.jpg',
-        'photo2.jpg',
-        'photo3.jpg',
-        'photo4.jpg'
+        'bathbrush.avif',
+        'pocket.avif',
+        'stumpbelt.jpeg',
+        'cheeky_chair.jpeg'
         // Add more image filenames here, e.g., 'photo5.jpg',
     ];
 
