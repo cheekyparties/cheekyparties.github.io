@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'pocket.avif',
         'cheeky_chair.jpeg',
         'holdingstrap.avif',
-        'stumpbelt.jpeg'
+        'stumpbelt.jpeg',
+        'beltstump.jpeg'
         // Add more image filenames here, e.g., 'photo5.jpg',
     ];
 
