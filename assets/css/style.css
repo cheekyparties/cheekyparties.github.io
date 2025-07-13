@@ -108,7 +108,7 @@ body {
 /* This rule defines the container's shape and crops the content */
 .photo-carousel {
     width: 100%;
-    aspect-ratio: 1 / 1;     /* Creates a square. Use 4 / 3 or 16 / 9 for other ratios. */
+    aspect-ratio: 2 / 3;     /* Creates a square. Use 4 / 3 or 16 / 9 for other ratios. */
     border-radius: 8px;      /* Applies rounded corners to the container */
     overflow: hidden;        /* Hides the parts of the image that overflow the container */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
