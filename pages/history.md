@@ -5,8 +5,11 @@ Remember that group of theater kids that took things a little too seriously? You
 # Meet The Organizers
 
 Bri: Adventurous, troublemaking (but always with a smile!)
+
 Em: Fearless and strong
+
 Mr. Hayes: Probably busy lecturing somebody
+
 Mystery Organizer: New description
 
 # More Lore
