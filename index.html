@@ -17,6 +17,35 @@ title: Welcome
         <p>Interested in attending a Cheeky event? If it's your first time joining us, you must first complete our <a href="/pages/vetting">vetting</a> process.</p>
         <p>Our next event is the Cheeky August Party on Sat. Aug 16th, 7:30pm - 1:30am.</p>
 
+        <div class="events-container">
+            <h2>Upcoming Events</h2>
+            <div class="events-list">
+                {% assign today_seconds = "now" | date: "%s" %}
+                {% for event in site.data.events %}
+                    {% assign event_end_seconds = event.end_date | date: "%s" %}
+                    {% if event_end_seconds >= today_seconds %}
+                        <div class="event-item">
+                            <p class="event-name">{{ event.name }}</p>
+                            <div class="event-date">
+                                {% assign start_day = event.start_date | date: "%j" %}
+                                {% assign end_day = event.end_date | date: "%j" %}
+                                
+                                {% if start_day == end_day %}
+                                    {{ event.start_date | date: "%a, %b %-d, %Y" }}
+                                    from {{ event.start_date | date: "%-I:%M %p" }} 
+                                    to {{ event.end_date | date: "%-I:%M %p" }}
+                                
+                                {% else %}
+                                    {{ event.start_date | date: "%a, %b %-d at %-I:%M %p" }} 
+                                    to {{ event.end_date | date: "%a, %b %-d at %-I:%M %p" }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        
         <div class="email-signup-container">
             <h2>Join our mailing list to stay connected!</h2>
             <form action="https://visitor.constantcontact.com/api/signup" method="post" target="_blank">
