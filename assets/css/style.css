@@ -109,51 +109,6 @@ a {
     fill: #5C4033; /* Dark Brown */
 }
 
-
-/* --- Responsive Design for Mobile Header (Updated) --- */
-@media (max-width: 768px) {
-    /* Hides the default navigation links */
-    .header .nav-links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        width: 220px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        border: 1px solid #ddd;
-        z-index: 1000;
-    }
-
-    /* Shows the dropdown when the 'active' class is added by JavaScript */
-    .header .nav-links.active {
-        display: block;
-    }
-
-    .header .nav-links ul {
-        flex-direction: column;
-        padding: 10px 0;
-        width: 100%;
-    }
-
-    .header .nav-links li {
-        margin: 0;
-        width: 100%;
-    }
-    
-    .header .nav-links a {
-        display: block;
-        padding: 12px 20px;
-        width: auto;
-    }
-
-    /* Shows the hamburger button */
-    .header .hamburger-btn {
-        display: block;
-    }
-}
-
 /* --- Homepage Two-Column Layout --- */
 
 .home-container {
@@ -188,18 +143,6 @@ a {
     height: 100%;
     object-fit: cover;       /* Scales the image to cover the area, cropping as needed */
     object-position: center; /* Centers the image within the frame before cropping */
-}
-
-/* --- Responsive Adjustments for Mobile --- */
-@media (max-width: 768px) {
-    .home-container {
-        flex-direction: column;
-    }
-
-    .photo-column {
-        padding-right: 0;
-        padding-bottom: 20px; /* Add space between stacked columns */
-    }
 }
 
 /* --- Custom Email Signup Form --- */
@@ -251,4 +194,59 @@ a {
 
 .form-row button:hover {
     background-color: #A52A2A; /* Dark Crimson on hover */
+}
+
+/* =============================================== */
+/* --- Mobile & Responsive Styles --- */
+/* =============================================== */
+
+@media (max-width: 768px) {
+    /* --- Header & Navigation --- */
+    .header .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 220px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        border: 1px solid #ddd;
+        z-index: 1000;
+    }
+
+    .header .nav-links.active {
+        display: block;
+    }
+
+    .header .nav-links ul {
+        flex-direction: column;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    .header .nav-links li {
+        margin: 0;
+        width: 100%;
+    }
+    
+    .header .nav-links a {
+        display: block;
+        padding: 12px 20px;
+        width: auto;
+    }
+
+    .header .hamburger-btn {
+        display: block;
+    }
+    
+    /* --- Homepage Layout --- */
+    .home-container {
+        flex-direction: column;
+    }
+
+    .photo-column {
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
 }
