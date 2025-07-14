@@ -87,18 +87,15 @@ a {
 }
 
 
-/* --- Responsive Design for Mobile Header --- */
+/* --- Responsive Design for Mobile Header (Updated) --- */
 @media (max-width: 768px) {
-    .hamburger-btn {
-        display: block; /* Show hamburger on mobile */
-    }
-
-    .nav-links {
-        display: none; /* Hide nav links by default on mobile */
+    /* Hides the default navigation links */
+    .header .nav-links {
+        display: none;
         position: absolute;
-        top: 70px; /* Position below the header */
-        right: 20px; /* Margin from the right edge */
-        width: 220px; /* Defined width for the dropdown */
+        top: 70px;
+        right: 20px;
+        width: 220px;
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.15);
@@ -106,25 +103,31 @@ a {
         z-index: 1000;
     }
 
-    .nav-links.active {
-        display: block; /* Show dropdown when active */
+    /* Shows the dropdown when the 'active' class is added by JavaScript */
+    .header .nav-links.active {
+        display: block;
     }
 
-    .nav-links ul {
+    .header .nav-links ul {
         flex-direction: column;
-        padding: 10px 0; /* Add some vertical padding */
+        padding: 10px 0;
         width: 100%;
     }
 
-    .nav-links li {
+    .header .nav-links li {
         margin: 0;
         width: 100%;
     }
-
-    .nav-links a {
+    
+    .header .nav-links a {
         display: block;
-        padding: 12px 20px; /* Make the whole area clickable */
+        padding: 12px 20px;
         width: auto;
+    }
+
+    /* Shows the hamburger button */
+    .header .hamburger-btn {
+        display: block;
     }
 }
 
