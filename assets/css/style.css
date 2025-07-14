@@ -71,24 +71,60 @@ a {
     color: #5C4033; /* Dark Brown */
 }
 
-/* Responsive Design for Mobile */
+/* --- Hamburger Menu Styles --- */
+
+.hamburger-btn {
+    display: none; /* Hidden by default on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001; /* Ensures it's above other content */
+}
+
+.hamburger-btn svg {
+    fill: #5C4033; /* Dark Brown */
+}
+
+
+/* --- Responsive Design for Mobile Header --- */
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: center;
+    .hamburger-btn {
+        display: block; /* Show hamburger on mobile */
     }
 
     .nav-links {
-        margin-top: 15px;
+        display: none; /* Hide nav links by default on mobile */
+        position: absolute;
+        top: 70px; /* Position below the header */
+        right: 20px; /* Margin from the right edge */
+        width: 220px; /* Defined width for the dropdown */
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        border: 1px solid #ddd;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: block; /* Show dropdown when active */
     }
 
     .nav-links ul {
         flex-direction: column;
-        align-items: center;
+        padding: 10px 0; /* Add some vertical padding */
+        width: 100%;
     }
 
     .nav-links li {
-        margin: 10px 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px 20px; /* Make the whole area clickable */
+        width: auto;
     }
 }
 
