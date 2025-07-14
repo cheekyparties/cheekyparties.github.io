@@ -71,6 +71,29 @@ a {
     color: #5C4033; /* Dark Brown */
 }
 
+/* --- Footer Social Links --- */
+.social-links {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px; /* Adjusts space between icons */
+}
+
+.social-links img {
+    width: 32px;  /* Icon size */
+    height: 32px;
+    vertical-align: middle; /* Aligns icons nicely */
+    opacity: 0.8; /* Slightly transparent by default */
+    transition: opacity 0.3s;
+}
+
+.social-links a:hover img {
+    opacity: 1.0; /* Fully opaque on hover */
+}
+
 /* --- Hamburger Menu Styles --- */
 
 .hamburger-btn {
