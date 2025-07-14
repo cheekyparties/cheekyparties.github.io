@@ -139,3 +139,54 @@ a {
         padding-bottom: 20px; /* Add space between stacked columns */
     }
 }
+
+/* --- Custom Email Signup Form --- */
+.email-signup-container {
+    background-color: #fff; /* White background to stand out */
+    border: 2px solid #A52A2A; /* Dark Crimson border */
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.email-signup-container h3 {
+    margin-top: 0;
+    color: #5C4033; /* Dark Brown */
+}
+
+.email-signup-container p {
+    margin-bottom: 15px;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap; /* Allows stacking on mobile */
+    gap: 10px;
+}
+
+.form-row input[type="email"] {
+    flex: 1; /* Allows it to grow and take up available space */
+    min-width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #5C4033;
+}
+
+.form-row button {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1em;
+    color: #fff;
+    background-color: #228B22; /* Leafy Green */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-row button:hover {
+    background-color: #A52A2A; /* Dark Crimson on hover */
+}
