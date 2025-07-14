@@ -2,34 +2,37 @@
 layout: default
 title: Welcome
 ---
-
-<!-- Begin Constant Contact Active Forms -->
-<script> var _ctct_m = "80cf9dbdc8861e12df93cb2741b08a61"; </script>
-<script id="signupScript" src="//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js" async defer></script>
-<!-- End Constant Contact Active Forms -->
-
-
 <div class="home-container">
-    <!-- Left 1/3: Photo Carousel -->
     <div class="photo-column">
         <div class="photo-carousel">
-            <!-- Images will be dynamically inserted here by JavaScript -->
             <img src="{{ '/assets/images/photo1.jpg' | absolute_url }}" alt="A fun, consensual party scene" id="carousel-image">
         </div>
     </div>
 
-    <!-- Right 2/3: Text Content -->
     <div class="text-column">
         <h2>Spanking Parties & General Extra-ness</h2>
         <p>We host spanking parties with a focus on school/related immersive events that allow adults the full headspace - a day of classes, homework assignments, tests, and of course - punishments if you misbehave. At night, we open back up to a broader party for anyone just looking for some spanking fun - but don’t be surprised if you peep someone expanding on the earlier shenanigans of the morning’s events. You know what they say: spanked at school, spanked at home. For more on the lore and structure of Cheeky Preporatory Academy, view our <a href="/pages/history">history</a> page.</p>
+        
         <h2>Where We're Located</h2>
         <p>We’re based in the Northeast, (NY/NJ/PA area) but we welcome friends from all over. We are currently hosting parties in downtown NYC, with occasional events in the general Mid-Atlantic area.</p>
+        
         <h2>Events</h2>
         <p>Interested in attending a Cheeky event? If it's your first time joining us, you must first complete our <a href="/pages/vetting">vetting</a> process.</p>
         <p>Our next event is the Cheeky August Party on Sat. Aug 16th, 7:30pm - 1:30am.</p>
-        <!-- Begin Constant Contact Inline Form Code -->
-        <div class="ctct-inline-form" data-form-id="b2b30bbc-aabe-450b-8b38-ff7906833356"></div>
-        <!-- End Constant Contact Inline Form Code -->
 
-    </div>
+        <div class="email-signup-container">
+            <h3>Join Our Mailing List</h3>
+            <p>Be the first to know about new events, stories, and community news. No spam, ever.</p>
+            <form action="https://visitor.constantcontact.com/api/signup" method="post" target="_blank">
+                <input type="hidden" name="ca" value="80cf9dbdc8861e12df93cb2741b08a61">
+                
+                <input type="hidden" name="list_id" value="123456789">
+
+                <div class="form-row">
+                    <input type="email" name="email_address" placeholder="your.email@example.com" required>
+                    <button type="submit">Sign Up</button>
+                </div>
+            </form>
+        </div>
+        </div>
 </div>
