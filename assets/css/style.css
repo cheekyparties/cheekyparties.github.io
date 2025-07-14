@@ -236,6 +236,15 @@ a {
     margin: 0;
 }
 
+/* --- Default Content Container for Pages --- */
+.content-box {
+    background-color: #fff;
+    border: 2px solid #A52A2A; /* Dark Crimson border */
+    border-radius: 8px;
+    padding: 20px 30px; /* A little extra horizontal padding for text */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
 /* =============================================== */
 /* --- Mobile & Responsive Styles --- */
 /* =============================================== */
