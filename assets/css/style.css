@@ -250,3 +250,43 @@ a {
         padding-bottom: 20px;
     }
 }
+
+/* --- Upcoming Events Container --- */
+.events-container {
+    background-color: #fff;
+    border: 2px solid #A52A2A; /* Dark Crimson border */
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.events-container h2 {
+    margin-top: 0;
+    color: #5C4033; /* Dark Brown */
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.event-item {
+    padding: 15px 5px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Removes the border from the very last event in the list */
+.event-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.event-name {
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    color: #5C4033;
+}
+
+.event-date {
+    font-size: 0.9em;
+    color: #A52A2A; /* Dark Crimson */
+    margin: 0;
+}
