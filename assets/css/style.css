@@ -309,17 +309,18 @@ a {
 
 .gallery-image-container {
     width: 100%;
+    aspect-ratio: 16 / 9; /* Sets a stable widescreen aspect ratio */
+    max-height: 650px;    /* Optional: sets a max height for the container */
     background-color: #f0f0f0;
     border-radius: 8px;
-    overflow: hidden;
+    overflow: hidden;     /* Hides the parts of the image that overflow */
 }
 
 .gallery-image {
     display: block;
     width: 100%;
     height: 100%;
-    max-height: 600px;
-    object-fit: contain; /* Shows the whole image without cropping */
+    object-fit: cover;    /* This crops the image instead of showing gray bars */
 }
 
 .gallery-nav {
