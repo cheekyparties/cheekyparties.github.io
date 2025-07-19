@@ -2,7 +2,6 @@
 layout: default
 ---
 
-<div class="content-limiter">
 <div class="blog-intro">
   <h1>{{ page.title }}</h1>
   <p>Welcome to our corner of the internet. Here are our latest posts.</p>
@@ -34,5 +33,4 @@ layout: default
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path | absolute_url }}" class="next">Older Posts &raquo;</a>
   {% endif %}
-</div>
 </div>
