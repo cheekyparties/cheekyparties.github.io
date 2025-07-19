@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<div class="blog-intro">
+  <h1>{{ page.title }}</h1>
+  <p>Welcome to our corner of the internet. Here are our latest posts.</p>
+</div>
+
+<div class="post-list">
+  {% for post in site.posts %}
+    <div class="post-preview">
+      <div class="preview-image">
+        <a href="{{ post.url | absolute_url }}">
+          <img src="{{ post.preview_photo | absolute_url }}" alt="{{ post.title }}">
+        </a>
+      </div>
+      <div class="preview-text">
+        <h2 class="preview-title"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+        <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+        <p class="preview-excerpt">
+          {{ post.excerpt | strip_html | truncatewords: 30 }}
+        </p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
