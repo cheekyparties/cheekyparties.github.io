@@ -19,11 +19,13 @@ Here is where more Cheeky lore will go.
 {% assign image_files = site.static_files | where_exp: "item", "item.path contains '/assets/images/history/'" %}
 {% assign image_paths = image_files | map: 'path' | sort %}
 
-<div class="history-gallery" data-images='{{ image_paths | jsonify }}'>
-    <div class="gallery-image-container">
-        <img class="gallery-image" src="" alt="History gallery image">
+<div class="content-limiter">
+    <div class="history-gallery" data-images='{{ image_paths | jsonify }}'>
+        <div class="gallery-image-container">
+            <img class="gallery-image" src="" alt="History gallery image">
+        </div>
+        <button class="gallery-nav prev" aria-label="Previous image">&#10094;</button>
+        <button class="gallery-nav next" aria-label="Next image">&#10095;</button>
+        <div class="gallery-counter"></div>
     </div>
-    <button class="gallery-nav prev" aria-label="Previous image">&#10094;</button>
-    <button class="gallery-nav next" aria-label="Next image">&#10095;</button>
-    <div class="gallery-counter"></div>
 </div>
