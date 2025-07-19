@@ -236,15 +236,6 @@ a {
     margin: 0;
 }
 
-/* --- Default Content Container for Pages --- */
-.content-box {
-    background-color: #fff;
-    border: 2px solid #A52A2A; /* Dark Crimson border */
-    border-radius: 8px;
-    padding: 20px 30px; /* A little extra horizontal padding for text */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
-
 /* =============================================== */
 /* --- Mobile & Responsive Styles --- */
 /* =============================================== */
@@ -460,42 +451,34 @@ a {
     color: #fff;
 }
 
-/* --- Content Width & Centering --- */
-
-/* This class will be used on the history gallery and blog layouts */
-.content-limiter {
-    width: 100%;
-    max-width: 960px; /* Max width on large screens */
-    margin-left: auto;
-    margin-right: auto;
+/* --- Homepage Content Containers --- */
+.text-column .content-box,
+.events-container,
+.email-signup-container {
+    background-color: #fff;
+    border: 2px solid #A52A2A; /* Dark Crimson border */
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-sizing: border-box; /* Prevents content from spilling over */
 }
 
-/* This updates your existing content box for other pages */
-.content-box {
-    width: 75%;
-    max-width: 960px; /* Max width on large screens */
-    margin-left: auto;
-    margin-right: auto;
+/* Removes the top margin from the very first box in the column */
+.text-column > div:first-child {
+    margin-top: 0;
 }
 
-/* On smaller screens, make the containers full-width */
-@media (max-width: 992px) {
-    .content-limiter,
-    .content-box {
-        width: 100%;
-    }
+/* Specific heading styles within the containers */
+.text-column .content-box h2,
+.events-container h2,
+.email-signup-container h2 {
+    margin-top: 0;
+    color: #5C4033; /* Dark Brown */
 }
 
-/* --- Global Page Width Container --- */
-.page-container {
-    max-width: 960px;   /* The maximum width on large screens */
-    margin: 0 auto;     /* This centers the container */
-    padding: 0 25px;    /* This creates fluid space on the sides */
-}
-
-/* This rule specifically targets the content box on the homepage */
-.text-column .content-box {
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+/* Specific style for the events container heading */
+.events-container h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
 }
