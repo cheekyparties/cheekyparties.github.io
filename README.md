@@ -6,7 +6,7 @@ To add a *blog post*, go into the _posts folder and copy the formatting from one
 
 To add *images* to the image carousel on the main page or the history page, add images to the folders /assets/images/frontpage or /assets/images/history.
 
-To add an *event*, 
+To add an *event*, go to the events.yml file inside the _data folder and simply create a new event (should be very intuitive).
 
 ### Lore
 
