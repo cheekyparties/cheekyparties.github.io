@@ -255,6 +255,11 @@ a {
         z-index: 1000;
     }
 
+    .photo-carousel {
+        height: auto;           /* Unsets the desktop 'stretch' behavior */
+        aspect-ratio: 16 / 9;   /* Sets a widescreen aspect ratio for mobile */
+    }
+
     .header .nav-links.active {
         display: block;
     }
