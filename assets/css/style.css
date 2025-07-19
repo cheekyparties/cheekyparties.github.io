@@ -131,7 +131,7 @@ a {
 /* This rule defines the container's shape and crops the content */
 .photo-carousel {
     width: 100%;
-    height: min(75vh, 44.44vw); 
+    height: 100%; /* This tells the container to fill the column's height */
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
