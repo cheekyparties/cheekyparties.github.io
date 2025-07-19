@@ -15,7 +15,15 @@
     </header>
 
     <main class="main-content">
+      {% if page.url == "/" %}
+        <!-- For the homepage, just show the content as-is -->
         {{ content }}
+      {% else %}
+        <!-- For all other pages, wrap content in the page-container -->
+        <div class="page-container">
+          {{ content }}
+        </div>
+      {% endif %}
     </main>
 
     <footer class="footer">
