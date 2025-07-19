@@ -459,3 +459,29 @@ a {
     background-color: #A52A2A;
     color: #fff;
 }
+
+/* --- Content Width & Centering --- */
+
+/* This class will be used on the history gallery and blog layouts */
+.content-limiter {
+    width: 100%;
+    max-width: 960px; /* Max width on large screens */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* This updates your existing content box for other pages */
+.content-box {
+    width: 75%;
+    max-width: 960px; /* Max width on large screens */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* On smaller screens, make the containers full-width */
+@media (max-width: 992px) {
+    .content-limiter,
+    .content-box {
+        width: 100%;
+    }
+}
