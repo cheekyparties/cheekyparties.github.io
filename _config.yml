@@ -8,3 +8,10 @@ url: "https://cheekyparties.github.io"
 # The baseurl should be an EMPTY string for a user/organization site like yours.
 # This is another CRITICAL setting.
 baseurl: ""
+
+# Pagination Settings
+plugins:
+  - jekyll-paginate
+
+paginate: 10
+paginate_path: "/blog/page:num/"
