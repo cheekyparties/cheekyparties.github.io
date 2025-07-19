@@ -444,6 +444,16 @@ a {
     transition: all 0.3s;
 }
 
+/* Styling for images inside a blog post */
+.post-content img {
+    display: block;
+    max-width: 50%; /* Ensures images are responsive and don't overflow */
+    height: auto;    /* Maintains the original aspect ratio */
+    margin: 30px auto; /* Adds space above/below and centers the image */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 .pagination-nav a:hover {
     background-color: #A52A2A;
     color: #fff;
