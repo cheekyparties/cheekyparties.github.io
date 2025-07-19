@@ -485,3 +485,10 @@ a {
         width: 100%;
     }
 }
+
+/* --- Global Page Width Container --- */
+.page-container {
+    max-width: 960px;   /* The maximum width on large screens */
+    margin: 0 auto;     /* This centers the container */
+    padding: 0 25px;    /* This creates fluid space on the sides */
+}
