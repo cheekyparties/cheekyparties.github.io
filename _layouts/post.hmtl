@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-<div class="content-limiter">
   <article class="post">
     <h1>{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</p>
@@ -10,4 +9,3 @@ layout: default
       {{ content }}
     </div>
   </article>
-</div>
