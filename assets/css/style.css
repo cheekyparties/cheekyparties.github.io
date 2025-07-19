@@ -492,3 +492,10 @@ a {
     margin: 0 auto;     /* This centers the container */
     padding: 0 25px;    /* This creates fluid space on the sides */
 }
+
+/* This rule specifically targets the content box on the homepage */
+.text-column .content-box {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
