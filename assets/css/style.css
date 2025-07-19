@@ -362,3 +362,65 @@ a {
     font-size: 0.9em;
     font-weight: bold;
 }
+
+/* --- Blog Page Styles --- */
+.post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between posts */
+}
+
+.post-preview {
+    display: flex;
+    gap: 20px;
+}
+
+/* Square cropped preview image on the left */
+.preview-image {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.preview-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.preview-text {
+    flex-grow: 1;
+}
+
+.preview-title {
+    margin: 0 0 5px 0;
+}
+
+.preview-title a {
+    text-decoration: none;
+    color: #A52A2A; /* Dark Crimson */
+}
+
+.preview-title a:hover {
+    text-decoration: underline;
+}
+
+.post-meta {
+    font-size: 0.9em;
+    color: #777;
+    margin: 0 0 10px 0;
+}
+
+/* Individual Post Styles */
+.post h1 {
+    color: #A52A2A;
+}
+
+.post-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+}
