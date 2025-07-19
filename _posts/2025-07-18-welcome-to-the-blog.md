@@ -2,7 +2,7 @@
 layout: post
 title: "Welcome to the New Cheeky Blog!"
 date: 2025-07-18 20:30:00 -0400
-preview_photo: "/assets/images/blog/preview1.jpg"
+preview_photo: "/assets/images/blog/hairbrush_testing_2.webp"
 ---
 
 This is the first sentence of our very first blog post. It will be used as the preview text on the main blog page.
