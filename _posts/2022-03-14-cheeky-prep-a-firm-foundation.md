@@ -2,10 +2,12 @@
 layout: post
 title: "Cheeky Prep: A Firm Foundation"
 date: 2025-07-18 20:30:00 -0400
-preview_photo: "/assets/images/blog/hairbrush_testing_2.webp"
+preview_photo: "/assets/images/blog/firmfoundation.webp"
 ---
 
 Cheeky Preparatory is a private school founded in 1972 by Alexander Cheelton and Kimberly Lexington. The two were former administrators and members of the Central Pennsylvania school board. They founded Cheeky because they noticed there was a shortage of schools with a healthy balance of progressive teachings and strict, old fashioned discipline.
+
+![An image inside the blog post](/assets/images/blog/firmfoundation.webp)
 
 Cheelton and Lexington developed Cheeky’s education modules with five core values in mind: personal responsibility, a passion for excellence, ethical process, diversity, and self discipline.
 
