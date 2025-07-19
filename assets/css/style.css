@@ -482,3 +482,10 @@ a {
     border-bottom: 1px solid #eee;
     padding-bottom: 10px;
 }
+
+/* --- Global Page Width Container --- */
+.page-container {
+    max-width: 960px;   /* Sets the maximum width on large screens */
+    margin: 0 auto;     /* This centers the container */
+    padding: 0 25px;    /* This creates fluid space on the sides */
+}
