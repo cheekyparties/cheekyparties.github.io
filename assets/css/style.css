@@ -492,5 +492,5 @@ a {
 .page-container {
     max-width: 960px;   /* Sets the maximum width on large screens */
     margin: 0 auto;     /* This centers the container */
-    padding: 0 25px;    /* This creates fluid space on the sides */
+    padding: 0 20px;    /* This creates fluid space on the sides */
 }
