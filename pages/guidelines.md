@@ -1,3 +1,8 @@
+---
+layout: default
+title: Guidelines
+---
+
 ## Community Guidelines and Policies
 
 Since its inception, Cheeky’s goal has been to provide a safe, inclusive space for spankos to explore their fetish. We feel that we cannot carry out this mission without providing clear standards on consent and best practices for our events. As such, we recently updated our community guidelines and policies for reporting consent incidents. We recognize that in order to maintain a safe environment, we cannot give way to complacency. As such, these policies are subject to evolve as we continue to educate ourselves. 
