@@ -1,4 +1,4 @@
-# Ready To Attend Your First Cheeky Party?
+## Ready To Attend Your First Cheeky Party?
 ​
 Before attending a Cheeky event, all guests must complete our vetting process. If you are new to our community, you can [begin the process here](https://docs.google.com/forms/d/e/1FAIpQLSfNyt1Ty9pTPrYPeCptPrzoVUZkw4NT6I0dSMZNnmw-3E1RwQ/viewform).
 
