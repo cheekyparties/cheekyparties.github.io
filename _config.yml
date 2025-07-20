@@ -24,14 +24,6 @@ markdown: kramdown  # Default Markdown parser
 theme: minima       # Default Jekyll theme
 permalink: pretty   # Pretty URLs for pages
 
-# Defaults
-defaults:
-  - scope:
-      path: ""  # Apply to all files
-      type: "posts"  # Only apply to posts
-      values:
-      layout: "default"  # Use the default layout
-
 # Exclusions
 exclude:
   - README.md  # Exclude README file from the build
