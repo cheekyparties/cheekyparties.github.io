@@ -31,12 +31,6 @@ defaults:
       type: "posts"  # Only apply to posts
       values:
       layout: "default"  # Use the default layout
-      
-# Collections
-collections:
-  projects:
-    output: true
-    permalink: /projects/:name/
 
 # Exclusions
 exclude:
