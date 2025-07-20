@@ -12,6 +12,35 @@ baseurl: ""
 # Pagination Settings
 plugins:
   - jekyll-paginate
+  - jekyll-feed   # Generate an RSS feed
+  - jekyll-seo-tag  # Add SEO meta tags
+  - jekyll-sitemap  # Generate a sitemap.xml file
 
 paginate: 10
 paginate_path: "/blog/page:num/"
+
+# Build Settings
+markdown: kramdown  # Default Markdown parser
+theme: minima       # Default Jekyll theme
+permalink: pretty   # Pretty URLs for pages
+
+# Defaults
+defaults:
+  - scope:
+      path: ""  # Apply to all files
+      type: "posts"  # Only apply to posts
+      values:
+      layout: "default"  # Use the default layout
+      
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+# Exclusions
+exclude:
+  - README.md  # Exclude README file from the build
+
+# Favicon
+favicon: /assets/images/logo.png
