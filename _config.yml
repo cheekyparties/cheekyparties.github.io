@@ -9,7 +9,7 @@ url: "https://cheekyparties.github.io"
 # This is another CRITICAL setting.
 baseurl: ""
 
-# Pagination Settings
+# Plugins and Pagination Settings
 plugins:
   - jekyll-paginate
   - jekyll-feed   # Generate an RSS feed
