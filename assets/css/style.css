@@ -1012,6 +1012,33 @@ a {
     color: #228B22;
 }
 
+.form-note {
+    margin-top: 12px;
+    padding: 12px 15px;
+    background-color: #f8f9fa;
+    border-left: 3px solid #228B22;
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: #5C4033;
+    line-height: 1.6;
+}
+
+.form-note a {
+    color: #228B22;
+}
+
+.form-note code {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+    color: #A52A2A;
+}
+
 .form-actions {
     margin-top: 30px;
     padding-top: 20px;
