@@ -5,15 +5,17 @@ layout: default
   <header class="story-header">
     <h1>{{ page.title }}</h1>
     <div class="story-meta">
+      {% assign author_slug = page.author | slugify %}
       <span class="story-author">
-        By <a href="{{ '/pages/authors/' | append: page.author | slugify | absolute_url }}">{{ page.author }}</a>
+        By <a href="{{ site.baseurl }}/pages/authors/{{ author_slug }}">{{ page.author }}</a>
       </span>
       <span class="story-date">{{ page.date | date: "%B %-d, %Y" }}</span>
     </div>
     {% if page.tags.size > 0 %}
     <div class="story-tags">
       {% for tag in page.tags %}
-        <a href="{{ '/pages/tags/' | append: tag | slugify | absolute_url }}" class="tag">{{ tag }}</a>
+        {% assign tag_slug = tag | slugify %}
+        <a href="{{ site.baseurl }}/pages/tags/{{ tag_slug }}" class="tag">{{ tag }}</a>
       {% endfor %}
     </div>
     {% endif %}
