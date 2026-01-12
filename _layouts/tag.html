@@ -33,19 +33,40 @@ layout: default
       <div class="sidebar-section">
         <h3>Tags</h3>
         <div class="tag-cloud">
-          {% assign all_tags = "" | split: "" %}
+          {% comment %}Collect unique tag slugs and count stories per slug{% endcomment %}
+          {% assign tag_slugs = "" | split: "" %}
+          {% assign tag_names = "" | split: "" %}
           {% for story in site.stories %}
             {% for tag in story.tags %}
-              {% assign all_tags = all_tags | push: tag %}
+              {% assign tag_slug = tag | slugify %}
+              {% unless tag_slugs contains tag_slug %}
+                {% assign tag_slugs = tag_slugs | push: tag_slug %}
+                {% assign tag_names = tag_names | push: tag %}
+              {% endunless %}
             {% endfor %}
           {% endfor %}
-          {% assign unique_tags = all_tags | uniq | sort %}
+          {% assign sorted_slugs = tag_slugs | sort %}
           {% assign page_tag_slug = page.tag | slugify %}
-          {% for tag in unique_tags %}
-            {% assign tag_count = all_tags | where_exp: "t", "t == tag" | size %}
-            {% assign tag_slug = tag | slugify %}
-            <a href="{{ site.baseurl }}/pages/tags/{{ tag_slug }}" class="tag" {% if tag_slug == page_tag_slug %}style="background-color: #A52A2A; color: white;"{% endif %}>
-              {{ tag }} <span class="count">({{ tag_count }})</span>
+          {% for slug in sorted_slugs %}
+            {% assign story_count = 0 %}
+            {% for story in site.stories %}
+              {% for tag in story.tags %}
+                {% assign t_slug = tag | slugify %}
+                {% if t_slug == slug %}
+                  {% assign story_count = story_count | plus: 1 %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+            {% comment %}Find original tag name for display{% endcomment %}
+            {% for i in (0..tag_slugs.size) %}
+              {% if tag_slugs[i] == slug %}
+                {% assign display_tag = tag_names[i] %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+            <a href="{{ site.baseurl }}/pages/tags/{{ slug }}" class="tag" {% if slug == page_tag_slug %}style="background-color: #A52A2A; color: white;"{% endif %}>
+              {{ display_tag }} <span class="count">({{ story_count }})</span>
             </a>
           {% endfor %}
         </div>
