@@ -91,7 +91,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const author = document.getElementById('storyAuthor').value.trim();
     const tagsInput = document.getElementById('storyTags').value.trim();
     const content = document.getElementById('storyContent').value;
-    const email = document.getElementById('authorEmail').value.trim();
     
     // Parse tags
     const tags = tagsInput
@@ -110,7 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     try {
       // Submit to GitHub via API (requires a GitHub Actions workflow or serverless function)
-      await submitToGitHub(filename, fullContent, title, author, email);
+      await submitToGitHub(filename, fullContent, title, author);
       
       // Show success message
       storyForm.style.display = 'none';
@@ -150,7 +149,7 @@ date: ${dateStr}
     return yaml;
   }
   
-  async function submitToGitHub(filename, content, title, author, email) {
+  async function submitToGitHub(filename, content, title, author) {
     // This function submits the story data via GitHub Issues
     // The issue will trigger a GitHub Action that processes and commits the story
     
@@ -159,7 +158,6 @@ date: ${dateStr}
       content: btoa(unescape(encodeURIComponent(content))), // Base64 encode
       title: title,
       author: author,
-      email: email,
       timestamp: new Date().toISOString()
     };
     
@@ -169,7 +167,6 @@ date: ${dateStr}
 
 **Title:** ${title}
 **Author:** ${author}
-**Email:** ${email || 'Not provided'}
 **Submitted:** ${new Date().toLocaleString()}
 
 ### Filename
