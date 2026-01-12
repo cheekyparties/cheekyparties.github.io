@@ -1,6 +1,8 @@
 [build]
-  publish = "_site"
-  command = "jekyll build"
+  # Skip building - we only use Netlify for the serverless function
+  # The main site is hosted on GitHub Pages
+  publish = "netlify/public"
+  command = "echo 'Skipping build - using Netlify for functions only'"
 
 [functions]
   directory = "netlify/functions"
