@@ -23,6 +23,7 @@ paginate_path: "/blog/page:num/"
 markdown: kramdown  # Default Markdown parser
 theme: minima       # Default Jekyll theme
 permalink: pretty   # Pretty URLs for pages
+future: true        # Allow future-dated content
 
 # Collections
 collections:

@@ -53,17 +53,17 @@ jobs:
             
             // Create author page if needed
             const authorSlug = author.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-            const authorPath = path.join('pub', 'authors', `${authorSlug}.md`);
+            const authorPath = path.join('pages', 'authors', `${authorSlug}.md`);
             
             if (!fs.existsSync(authorPath)) {
               fs.mkdirSync(path.dirname(authorPath), { recursive: true });
               const authorContent = `---
-            layout: author
-            title: "Stories by ${author}"
-            author: "${author}"
-            permalink: /pub/authors/${authorSlug}/
-            ---
-            `;
+layout: author
+title: "Stories by ${author}"
+author: "${author}"
+permalink: /pages/authors/${authorSlug}/
+---
+`;
               fs.writeFileSync(authorPath, authorContent);
             }
             
@@ -73,16 +73,16 @@ jobs:
               const tags = tagsMatch[1].match(/-\s+(.+)/g).map(t => t.replace(/^-\s+/, '').trim());
               for (const tag of tags) {
                 const tagSlug = tag.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-                const tagPath = path.join('pub', 'tags', `${tagSlug}.md`);
+                const tagPath = path.join('pages', 'tags', `${tagSlug}.md`);
                 if (!fs.existsSync(tagPath)) {
                   fs.mkdirSync(path.dirname(tagPath), { recursive: true });
                   const tagContent = `---
-            layout: tag
-            title: "Stories tagged ${tag}"
-            tag: "${tag}"
-            permalink: /pub/tags/${tagSlug}/
-            ---
-            `;
+layout: tag
+title: "Stories tagged ${tag}"
+tag: "${tag}"
+permalink: /pages/tags/${tagSlug}/
+---
+`;
                   fs.writeFileSync(tagPath, tagContent);
                 }
               }
@@ -97,7 +97,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add _stories/ pub/authors/ pub/tags/
+          git add _stories/ pages/authors/ pages/tags/
           git commit -m "Add new story: ${{ steps.parse.outputs.filename }}" || echo "No changes to commit"
           git push
 
