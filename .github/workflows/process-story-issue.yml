@@ -52,7 +52,8 @@ jobs:
             fs.writeFileSync(storyPath, decodedContent);
             
             // Create author page if needed
-            const authorSlug = author.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+            // Match Jekyll's slugify: replace non-alphanumeric with hyphens, then collapse and trim
+            const authorSlug = author.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
             const authorPath = path.join('pages', 'authors', `${authorSlug}.md`);
             
             if (!fs.existsSync(authorPath)) {
@@ -72,7 +73,8 @@ permalink: /pages/authors/${authorSlug}/
             if (tagsMatch) {
               const tags = tagsMatch[1].match(/-\s+(.+)/g).map(t => t.replace(/^-\s+/, '').trim());
               for (const tag of tags) {
-                const tagSlug = tag.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+                // Match Jekyll's slugify: replace non-alphanumeric with hyphens, then collapse and trim
+                const tagSlug = tag.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
                 const tagPath = path.join('pages', 'tags', `${tagSlug}.md`);
                 if (!fs.existsSync(tagPath)) {
                   fs.mkdirSync(path.dirname(tagPath), { recursive: true });
