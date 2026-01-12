@@ -40,7 +40,7 @@ function initPagination() {
   
   if (!paginationContainer || !storyList) return;
   
-  const perPage = parseInt(paginationContainer.dataset.perPage) || 10;
+  const perPage = parseInt(paginationContainer.dataset.perPage) || 20;
   const stories = storyList.querySelectorAll('.story-preview');
   const totalStories = stories.length;
   const totalPages = Math.ceil(totalStories / perPage);

@@ -2,5 +2,5 @@
 layout: tag
 title: "Stories tagged historical"
 tag: "historical"
-permalink: /pub/tags/historical/
+permalink: /pages/tags/historical/
 ---

@@ -6,14 +6,14 @@ layout: default
     <h1>{{ page.title }}</h1>
     <div class="story-meta">
       <span class="story-author">
-        By <a href="{{ '/pub/authors/' | append: page.author | slugify | append: '/' | absolute_url }}">{{ page.author }}</a>
+        By <a href="{{ '/pages/authors/' | append: page.author | slugify | absolute_url }}">{{ page.author }}</a>
       </span>
       <span class="story-date">{{ page.date | date: "%B %-d, %Y" }}</span>
     </div>
     {% if page.tags.size > 0 %}
     <div class="story-tags">
       {% for tag in page.tags %}
-        <a href="{{ '/pub/tags/' | append: tag | slugify | append: '/' | absolute_url }}" class="tag">{{ tag }}</a>
+        <a href="{{ '/pages/tags/' | append: tag | slugify | absolute_url }}" class="tag">{{ tag }}</a>
       {% endfor %}
     </div>
     {% endif %}
