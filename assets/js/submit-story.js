@@ -3,8 +3,8 @@
  * Handles password authentication and story submission to GitHub
  */
 
-// Netlify Function URL (automatically works when deployed to Netlify)
-const STORY_SUBMIT_URL = '/api/submit-story';
+// Netlify Function URL
+const STORY_SUBMIT_URL = 'https://cheekypub.netlify.app/.netlify/functions/submit-story';
 
 document.addEventListener('DOMContentLoaded', function() {
   // CONFIGURATION: Set your submission password here
