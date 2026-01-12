@@ -1,0 +1,57 @@
+name: Process Story Submission
+
+on:
+  workflow_dispatch:
+    inputs:
+      filename:
+        description: 'Filename for the story (e.g., 2026-01-15-my-story.md)'
+        required: true
+        type: string
+      content:
+        description: 'Base64 encoded story content with front matter'
+        required: true
+        type: string
+      author:
+        description: 'Author name for creating author page if needed'
+        required: true
+        type: string
+
+jobs:
+  create-story:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Decode and create story file
+        run: |
+          # Decode the base64 content
+          echo "${{ github.event.inputs.content }}" | base64 -d > "_stories/${{ github.event.inputs.filename }}"
+          
+          # Create author page if it doesn't exist
+          AUTHOR="${{ github.event.inputs.author }}"
+          AUTHOR_SLUG=$(echo "$AUTHOR" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's/[^a-z0-9-]//g')
+          AUTHOR_FILE="pub/authors/${AUTHOR_SLUG}.md"
+          
+          if [ ! -f "$AUTHOR_FILE" ]; then
+            mkdir -p pub/authors
+            cat > "$AUTHOR_FILE" << EOF
+          ---
+          layout: author
+          title: "Stories by ${AUTHOR}"
+          author: "${AUTHOR}"
+          permalink: /pub/authors/${AUTHOR_SLUG}/
+          ---
+          EOF
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add _stories/ pub/authors/
+          git commit -m "Add new story: ${{ github.event.inputs.filename }}" || echo "No changes to commit"
+          git push

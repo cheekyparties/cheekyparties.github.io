@@ -1,0 +1,96 @@
+---
+layout: default
+---
+
+<div class="stories-page">
+  <!-- Mobile Authors/Tags Toggle -->
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+    <span>Authors &amp; Tags</span>
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+      <path d="M7 10l5 5 5-5z"/>
+    </svg>
+  </button>
+
+  <div class="stories-container">
+    <!-- Sidebar with Authors and Tags -->
+    <aside class="stories-sidebar" id="storiesSidebar">
+      <div class="sidebar-section">
+        <h3>Authors</h3>
+        <ul class="author-list">
+          {% assign authors = site.stories | map: "author" | uniq | sort %}
+          {% for author in authors %}
+            {% assign author_stories = site.stories | where: "author", author %}
+            <li {% if author == page.author %}class="active"{% endif %}>
+              <a href="{{ '/pub/authors/' | append: author | slugify | append: '/' | absolute_url }}">
+                {{ author }} <span class="count">({{ author_stories.size }})</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3>Tags</h3>
+        <div class="tag-cloud">
+          {% assign all_tags = "" | split: "" %}
+          {% for story in site.stories %}
+            {% for tag in story.tags %}
+              {% assign all_tags = all_tags | push: tag %}
+            {% endfor %}
+          {% endfor %}
+          {% assign unique_tags = all_tags | uniq | sort %}
+          {% for tag in unique_tags %}
+            {% assign tag_count = all_tags | where_exp: "t", "t == tag" | size %}
+            <a href="{{ '/pub/tags/' | append: tag | slugify | append: '/' | absolute_url }}" class="tag">
+              {{ tag }} <span class="count">({{ tag_count }})</span>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <a href="{{ '/pub/submit/' | absolute_url }}" class="submit-link-btn">
+          ✏️ Submit a Story
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Stories List -->
+    <main class="stories-main">
+      <h1>Stories by {{ page.author }}</h1>
+      <p class="filter-notice">
+        <a href="{{ '/pub/' | absolute_url }}" class="clear-filter">&larr; Back to all stories</a>
+      </p>
+
+      {{ content }}
+
+      <div class="story-list">
+        {% assign author_stories = site.stories | where: "author", page.author | sort: "date" | reverse %}
+        
+        {% for story in author_stories %}
+          <article class="story-preview">
+            <h2 class="story-title">
+              <a href="{{ story.url | absolute_url }}">{{ story.title }}</a>
+            </h2>
+            <div class="story-meta">
+              <span class="story-date">{{ story.date | date: "%B %-d, %Y" }}</span>
+            </div>
+            {% if story.tags.size > 0 %}
+            <div class="story-tags">
+              {% for tag in story.tags %}
+                <a href="{{ '/pub/tags/' | append: tag | slugify | append: '/' | absolute_url }}" class="tag">{{ tag }}</a>
+              {% endfor %}
+            </div>
+            {% endif %}
+            <p class="story-excerpt">
+              {{ story.excerpt | strip_html | truncatewords: 50 }}
+            </p>
+            <a href="{{ story.url | absolute_url }}" class="read-more">Read more &rarr;</a>
+          </article>
+        {% endfor %}
+      </div>
+    </main>
+  </div>
+</div>
+
+<script src="{{ '/assets/js/stories.js' | absolute_url }}"></script>

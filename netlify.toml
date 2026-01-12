@@ -1,0 +1,12 @@
+[build]
+  publish = "_site"
+  command = "jekyll build"
+
+[functions]
+  directory = "netlify/functions"
+
+# Redirect for the function (optional, makes URL cleaner)
+[[redirects]]
+  from = "/api/submit-story"
+  to = "/.netlify/functions/submit-story"
+  status = 200

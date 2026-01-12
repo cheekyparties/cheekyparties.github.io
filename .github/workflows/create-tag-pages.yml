@@ -1,0 +1,61 @@
+name: Create Tag Pages
+
+on:
+  push:
+    paths:
+      - '_stories/**'
+  workflow_dispatch:
+
+jobs:
+  create-tag-pages:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1'
+
+      - name: Extract and create tag pages
+        run: |
+          mkdir -p pub/tags
+          
+          # Extract all unique tags from stories
+          for story in _stories/*.md; do
+            if [ -f "$story" ]; then
+              # Extract tags from front matter
+              sed -n '/^tags:/,/^[a-z]/p' "$story" | grep -E '^\s+-\s+' | sed 's/^\s*-\s*//' | while read tag; do
+                if [ -n "$tag" ]; then
+                  # Create slug from tag
+                  TAG_SLUG=$(echo "$tag" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's/[^a-z0-9-]//g')
+                  TAG_FILE="pub/tags/${TAG_SLUG}.md"
+                  
+                  # Create tag page if it doesn't exist
+                  if [ ! -f "$TAG_FILE" ]; then
+                    cat > "$TAG_FILE" << EOF
+          ---
+          layout: tag
+          title: "Stories tagged ${tag}"
+          tag: "${tag}"
+          permalink: /pub/tags/${TAG_SLUG}/
+          ---
+          EOF
+                    echo "Created tag page: $TAG_FILE"
+                  fi
+                fi
+              done
+            fi
+          done
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add pub/tags/
+          git diff --staged --quiet || git commit -m "Update tag pages"
+          git push || echo "Nothing to push"

@@ -24,6 +24,20 @@ markdown: kramdown  # Default Markdown parser
 theme: minima       # Default Jekyll theme
 permalink: pretty   # Pretty URLs for pages
 
+# Collections
+collections:
+  stories:
+    output: true
+    permalink: /pub/:path/
+
+# Defaults for stories collection
+defaults:
+  - scope:
+      path: ""
+      type: "stories"
+    values:
+      layout: "story"
+
 # Exclusions
 exclude:
   - README.md  # Exclude README file from the build

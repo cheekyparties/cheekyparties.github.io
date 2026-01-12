@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<article class="story">
+  <header class="story-header">
+    <h1>{{ page.title }}</h1>
+    <div class="story-meta">
+      <span class="story-author">
+        By <a href="{{ '/pub/authors/' | append: page.author | slugify | append: '/' | absolute_url }}">{{ page.author }}</a>
+      </span>
+      <span class="story-date">{{ page.date | date: "%B %-d, %Y" }}</span>
+    </div>
+    {% if page.tags.size > 0 %}
+    <div class="story-tags">
+      {% for tag in page.tags %}
+        <a href="{{ '/pub/tags/' | append: tag | slugify | append: '/' | absolute_url }}" class="tag">{{ tag }}</a>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="story-content">
+    {{ content }}
+  </div>
+
+  <footer class="story-footer">
+    <a href="{{ '/pub/' | absolute_url }}" class="back-link">&larr; Back to Stories</a>
+  </footer>
+</article>
