@@ -58,13 +58,15 @@ jobs:
             
             if (!fs.existsSync(authorPath)) {
               fs.mkdirSync(path.dirname(authorPath), { recursive: true });
-              const authorContent = `---
-layout: author
-title: "Stories by ${author}"
-author: "${author}"
-permalink: /pages/authors/${authorSlug}/
----
-`;
+              const authorContent = [
+                '---',
+                'layout: author',
+                `title: "Stories by ${author}"`,
+                `author: "${author}"`,
+                `permalink: /pages/authors/${authorSlug}/`,
+                '---',
+                ''
+              ].join('\n');
               fs.writeFileSync(authorPath, authorContent);
             }
             
@@ -78,13 +80,15 @@ permalink: /pages/authors/${authorSlug}/
                 const tagPath = path.join('pages', 'tags', `${tagSlug}.md`);
                 if (!fs.existsSync(tagPath)) {
                   fs.mkdirSync(path.dirname(tagPath), { recursive: true });
-                  const tagContent = `---
-layout: tag
-title: "Stories tagged ${tag}"
-tag: "${tag}"
-permalink: /pages/tags/${tagSlug}/
----
-`;
+                  const tagContent = [
+                    '---',
+                    'layout: tag',
+                    `title: "Stories tagged ${tag}"`,
+                    `tag: "${tag}"`,
+                    `permalink: /pages/tags/${tagSlug}/`,
+                    '---',
+                    ''
+                  ].join('\n');
                   fs.writeFileSync(tagPath, tagContent);
                 }
               }
