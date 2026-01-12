@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // CONFIGURATION: Set your submission password here
   // To generate a hash: in browser console, run: 
   // crypto.subtle.digest('SHA-256', new TextEncoder().encode('yourpassword')).then(b => console.log(Array.from(new Uint8Array(b)).map(x => x.toString(16).padStart(2, '0')).join('')))
-  const PASSWORD_HASH = 'SET_YOUR_PASSWORD_HASH_HERE';
+  const PASSWORD_HASH = '9a82a0f82b48530ba7121311c23c6d895b18111d5665708b3f60c1552f24aa7b';
   
   const passwordGate = document.getElementById('passwordGate');
   const submissionForm = document.getElementById('submissionForm');
