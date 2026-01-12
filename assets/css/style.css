@@ -489,6 +489,33 @@ a {
     padding-bottom: 10px;
 }
 
+/* --- Global Content Box (reusable container with white background) --- */
+.content-box {
+    background-color: #fff;
+    border: 2px solid #A52A2A; /* Dark Crimson border */
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-sizing: border-box;
+}
+
+.content-box h1,
+.content-box h2,
+.content-box h3 {
+    color: #5C4033; /* Dark Brown */
+}
+
+.content-box h1:first-child,
+.content-box h2:first-child,
+.content-box h3:first-child {
+    margin-top: 0;
+}
+
+.content-box:last-child {
+    margin-bottom: 0;
+}
+
 /* --- Global Page Width Container --- */
 .page-container {
     max-width: 960px;   /* Sets the maximum width on large screens */
