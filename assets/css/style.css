@@ -371,6 +371,7 @@ a {
 .post-preview {
     display: flex;
     gap: 20px;
+    min-width: 0; /* Allows flex children to shrink below content size */
 }
 
 /* Square cropped preview image on the left */
@@ -390,6 +391,9 @@ a {
 
 .preview-text {
     flex-grow: 1;
+    min-width: 0; /* Allows text to wrap properly in flex container */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
 .preview-title {
@@ -1124,5 +1128,33 @@ a {
     
     .submission-form {
         padding: 20px;
+    }
+    
+    /* Reduce padding on mobile for all containers */
+    .page-container {
+        padding: 0 10px;
+    }
+    
+    .content-box {
+        padding: 15px;
+    }
+    
+    .stories-page {
+        padding: 0 10px;
+    }
+    
+    .main-content {
+        padding: 10px;
+    }
+    
+    /* Blog preview adjustments for mobile */
+    .post-preview {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .preview-image {
+        width: 100%;
+        height: 200px;
     }
 }
