@@ -23,21 +23,6 @@ paginate_path: "/blog/page:num/"
 markdown: kramdown  # Default Markdown parser
 theme: minima       # Default Jekyll theme
 permalink: pretty   # Pretty URLs for pages
-future: true        # Allow future-dated content
-
-# Collections
-collections:
-  stories:
-    output: true
-    permalink: /pub/:path/
-
-# Defaults for stories collection
-defaults:
-  - scope:
-      path: ""
-      type: "stories"
-    values:
-      layout: "story"
 
 # Exclusions
 exclude:
