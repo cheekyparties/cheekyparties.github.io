@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cheeky Prep: A Firm Foundation"
-date: 2025-07-18 20:30:00 -0400
+date: 2022-03-14 12:00:00 -0400
 preview_photo: "/assets/images/blog/firmfoundation.avif"
 ---
 
