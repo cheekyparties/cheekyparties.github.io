@@ -21,6 +21,7 @@ ElinaBelle: Takes lounging seriously and is usually found in her living room ham
 ## More Lore
 
 Here is where more Cheeky lore will go.
+{% endcomment %}
         
 {% assign image_files = site.static_files | where_exp: "item", "item.path contains '/assets/images/history/'" %}
 {% assign image_paths = image_files | map: 'path' | sort %}
@@ -34,4 +35,3 @@ Here is where more Cheeky lore will go.
     <button class="gallery-nav next" aria-label="Next image">&#10095;</button>
     <div class="gallery-counter"></div>
 </div>
-{% endcomment %}
