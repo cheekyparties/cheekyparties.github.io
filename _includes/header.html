@@ -14,10 +14,10 @@
 
 <nav class="nav-links" id="nav-menu">
     <ul>
-        <li><a href="{{ '/pages/history' | absolute_url }}">History</a></li>
-        <li><a href="{{ '/pages/vetting' | absolute_url }}">Vetting</a></li>
-        <li><a href="{{ '/pages/guidelines' | absolute_url }}">Guidelines</a></li>        
-        <li><a href="{{ '/blog/' | absolute_url }}">Blog</a></li>
-        <li><a href="https://cheekypubs.github.io/" target="_blank" rel="noopener" class="external-link">Stories ↗</a></li>
+        <li><a href="{{ '/pages/history' | absolute_url }}" {% if page.url contains '/pages/history' %}class="active"{% endif %}>History</a></li>
+        <li><a href="{{ '/pages/vetting' | absolute_url }}" {% if page.url contains '/pages/vetting' %}class="active"{% endif %}>Vetting</a></li>
+        <li><a href="{{ '/pages/guidelines' | absolute_url }}" {% if page.url contains '/pages/guidelines' %}class="active"{% endif %}>Guidelines</a></li>        
+        <li><a href="{{ '/blog/' | absolute_url }}" {% if page.url contains '/blog' %}class="active"{% endif %}>Blog</a></li>
+        <li><a href="https://cheekypubs.github.io/" target="_blank" rel="noopener noreferrer" class="external-link">Stories ↗</a></li>
     </ul>
 </nav>

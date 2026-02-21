@@ -5,7 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{{ page.title }} | {{ site.title }}</title>
-    
+
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T9CNYGYHST"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T9CNYGYHST');
+    </script>
+
+    {% seo %}
+    <link rel="icon" type="image/png" href="{{ '/assets/images/logo/favicon.png' | absolute_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}">
 </head>
 <body>

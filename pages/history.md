@@ -9,14 +9,15 @@ Remember that group of theater kids that took things a little too seriously? You
 
 ## Meet The Organizers
 
-Bri: Adventurous, troublemaking (but always with a smile!)
+Blathers: Constantly spouting facts about Visigoths, and leader of the fight against countertop-sitting everywhere
 
-Em: Fearless and strong
+Crashdance: A joyful spanko who loves to dance so much she sometimes bangs into unforseen walls. Go big or go home!
 
-Mr. Hayes: Probably busy lecturing somebody
+RBG: "It doesn't fucking stand for Ruth Bader Ginsberg"
 
-Mystery Organizer: New description
+ElinaBelle: Takes lounging seriously and is usually found in her living room hammock or on her dining room futon
 
+{% comment %}
 ## More Lore
 
 Here is where more Cheeky lore will go.
@@ -33,3 +34,4 @@ Here is where more Cheeky lore will go.
     <button class="gallery-nav next" aria-label="Next image">&#10095;</button>
     <div class="gallery-counter"></div>
 </div>
+{% endcomment %}

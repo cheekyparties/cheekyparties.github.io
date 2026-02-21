@@ -9,12 +9,6 @@ Since its inception, Cheeky’s goal has been to provide a safe, inclusive space
 
 If you have any questions or concerns about these updates, please feel free to DM us via Twitter or Fetlife, or send us an e-mail at cheekyspankos@gmail.com.
 
-## COVID-19 Policy
-
-All those in attendance at Cheeky, including staff, must show proof of vaccination against COVID-19. Fully vaccinated is defined as at least 14 days after receiving the final FDA or WHO approved vaccine in a one- or two-shot protocol. Proof of vaccination is comprised of your vaccination record and ID showing identical information at time of entry. This information will not be collected or stored. Failure to produce proof of vaccination at time of event will result in being disallowed from the event without refund.
-
-Please note that our health and safety policies may be updated at any time and will be messaged accordingly, and we expect our attendees to be fully up to date with those communications before arriving on-site. We will provide ample reminders before an event.
- 
 ## Guidelines for Party Behavior
 
 Cheeky takes seriously the responsibility of creating a space that is safe, fun, and supportive for all our attendees. The following guidelines are intended to signpost responsible, consent-forward play between our guests. It is an evolving document; when necessary we will make changes or clarifications.
@@ -83,6 +77,13 @@ Attending a party is a privilege, not a right, and we reserve the right to ban a
 
 We default to belief on all reports. But false reports - while very rare - endanger everyone. If we discover that someone has made a knowingly false accusation or assists in the spread of misinformation about an individual, that may be cause for banning as well. We want to hear about your experiences, and encourage the focus to remain on those who have been harmed rather than unsourced rumors that risk damaging the process.
 
+## COVID-19 Policy
+
+All those in attendance at Cheeky, including staff, must show proof of vaccination against COVID-19. Fully vaccinated is defined as at least 14 days after receiving the final FDA or WHO approved vaccine in a one- or two-shot protocol. Proof of vaccination is comprised of your vaccination record and ID showing identical information at time of entry. This information will not be collected or stored. Failure to produce proof of vaccination at time of event will result in being disallowed from the event without refund.
+
+Please note that our health and safety policies may be updated at any time and will be messaged accordingly, and we expect our attendees to be fully up to date with those communications before arriving on-site. We will provide ample reminders before an event.
+
+{% comment %}
 ## Resources
 
 The following is a list of some of the resources Cheeky staff consulted in the creation of these guidelines and procedures.
@@ -92,3 +93,4 @@ The following is a list of some of the resources Cheeky staff consulted in the c
 [Links]()
 
 [Here]()
+{% endcomment %}
