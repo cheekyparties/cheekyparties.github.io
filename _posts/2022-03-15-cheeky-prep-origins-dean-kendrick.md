@@ -3,7 +3,7 @@ layout: post
 title: "Cheeky Prep Origins: Dean Kendrick"
 date: 2022-03-15
 author: Cheeky Spankos
-image: /assets/images/blog/origins-kendrick.jpg
+preview_photo: /assets/images/blog/origins-kendrick.jpg
 ---
 
 You may know Dean Kendrick from her firm lectures and the click of her heels in the hallway, but have you ever wondered what she was like before she became the dean of discipline? Learn more about her history in the second part of the riveting series, Cheeky Administrators: Before The Discipline.*

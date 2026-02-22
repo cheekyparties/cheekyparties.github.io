@@ -3,7 +3,7 @@ layout: post
 title: "A Letter From The Principal"
 date: 2022-05-05
 author: Cheeky Spankos
-image: /assets/images/blog/letter-from-principal.jpg
+preview_photo: /assets/images/blog/letter-from-principal.jpg
 ---
 
 A shut schoolhouse door is a cruel sight. For two years now, the doors of our academy have been barred against a silent threat. Autumn, its golden light the standard herald of a new semester, lit its sad bonfires only for deer and ghosts. Stern winter's drafts found no nervous students to chill, as they awaited test scores or discipline near an old casement window. And what of spring, that season of promise, and prom? Just the swallows saw it in, their gray nests hidden in the quiet eaves of this old academy.

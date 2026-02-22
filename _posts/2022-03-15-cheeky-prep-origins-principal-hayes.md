@@ -3,7 +3,7 @@ layout: post
 title: "Cheeky Prep Origins: Principal Hayes"
 date: 2022-03-15
 author: Cheeky Spankos
-image: /assets/images/blog/origins-hayes.jpg
+preview_photo: /assets/images/blog/origins-hayes.jpg
 ---
 
 You may know Principal Hayes as the firm but fair principal of Cheeky Preparatory. But have you ever wondered where he got his start? We'll learn more about his history in the first part of the riveting series, Cheeky Administrators: Before The Discipline.*
