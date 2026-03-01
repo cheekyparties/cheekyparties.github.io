@@ -1,0 +1,102 @@
+<!-- Organization Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Cheeky Spankos",
+  "alternateName": "Cheeky Spanking Parties",
+  "url": "https://cheekyparties.github.io",
+  "logo": "https://cheekyparties.github.io/assets/images/logo/logo.png",
+  "description": "Fun, consensual spanking parties and events for adults in New York City",
+  "sameAs": [
+    "https://x.com/cheekyspankos",
+    "https://fetlife.com/groups/91209"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "New York",
+    "addressRegion": "NY",
+    "addressCountry": "US"
+  },
+  "areaServed": "New York"
+}
+</script>
+
+<!-- WebSite Schema (for search enhancement) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Cheeky Spankos - New York Spanking Parties",
+  "url": "https://cheekyparties.github.io",
+  "description": "Discover exciting new york spanking parties and consensual adult events in downtown NYC",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://cheekyparties.github.io/blog/?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- Event Schema (for upcoming events) -->
+{% if site.data.events %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EventSeries",
+  "name": "Cheeky Spanking Parties",
+  "description": "Regular new york spanking parties and immersive events in downtown New York City",
+  "url": "https://cheekyparties.github.io",
+  "location": {
+    "@type": "City",
+    "name": "New York City",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "addressCountry": "US"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Cheeky Spankos",
+    "url": "https://cheekyparties.github.io"
+  }
+}
+</script>
+
+{% for event in site.data.events limit: 5 %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "{{ event.name }}",
+  "description": "A spanking party and consensual adult event in New York City",
+  "startDate": "{{ event.start_date | date: '%Y-%m-%dT%H:%M:%S' }}",
+  "endDate": "{{ event.end_date | date: '%Y-%m-%dT%H:%M:%S' }}",
+  "eventAttendanceMode": "OfflineEventAttendanceMode",
+  "eventStatus": "EventScheduled",
+  "location": {
+    "@type": "Place",
+    "name": "Downtown New York City",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "postalCode": "",
+      "addressCountry": "US"
+    }
+  },
+  "organizer": {
+    "@type": "Organization",
+    "name": "Cheeky Spankos",
+    "url": "https://cheekyparties.github.io"
+  },
+  "url": "https://cheekyparties.github.io"
+}
+</script>
+{% endfor %}
+{% endif %}
